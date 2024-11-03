@@ -1,4 +1,5 @@
 from collections import deque
+from typing import List
 class Solution:
     def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
         if grid[0][0] != 0:

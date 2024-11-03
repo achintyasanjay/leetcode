@@ -1,12 +1,12 @@
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 from collections import deque,defaultdict
 class Solution:
-    def verticalOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def verticalOrder(self, root: Optional[TreeNode]) -> List[List[int]]: # type: ignore
         # Check if empty root
         # Create a dictionary to store all the nodes in the tree
         # Make sure to store the nodes by having a column counter where root is 0 and any column left is -1 and right is +1

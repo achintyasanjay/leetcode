@@ -1,7 +1,7 @@
 import heapq
 
 class Solution:
-    def findKthLargest(self, nums: List[int], k: int) -> int:
+    def findKthLargest(self, nums: List[int], k: int) -> int: # type: ignore
         # Create maxheap
         # Push every number in array on to heap, but only maintain length of k
         # Pop the smallest number off which heappop does natively because minheap in python
