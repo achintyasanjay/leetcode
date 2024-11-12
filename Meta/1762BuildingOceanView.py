@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def findBuildings(self, heights: List[int]) -> List[int]:
         # Create and set a max iterating from the right

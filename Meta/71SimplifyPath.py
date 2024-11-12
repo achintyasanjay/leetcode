@@ -1,6 +1,6 @@
 class Solution:
     def simplifyPath(self, path: str) -> str:
-        # Use stack to keep track of all the components in the strin
+        # Use stack to keep track of all the components in the string
         # Split string by slashes to get all directories
         # If single period, just skip over
         # If double period, check if anything in dir stack and pop parent directory 
