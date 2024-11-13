@@ -1,5 +1,6 @@
+from typing import List
 class Solution:
-    def findKthPositive(self, arr: List[int], k: int) -> int:
+    def findKthMissingPositive(self, arr: List[int], k: int) -> int:
         # We can approach this using binary search to get logn time
         # Every time we cut our search in half we check if our missing count is greater/lower than k
         # Missing count can be calculated as arr[i] - (i + 1) which properly accounts for the amount of missed int

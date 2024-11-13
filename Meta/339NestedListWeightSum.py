@@ -71,13 +71,14 @@ class Solution:
         # Create DFS function to recurse to max depth while summing integer values
         # Check if integer, if true sum it and if false dive another level
         # Start off with calling dfs function on input list
+        total = 0
         def dfs(element, depth):
-            total = 0
+            nonlocal total
             for elem in element:
                 if elem.isInteger():
                     total += elem.getInteger() * depth
                 else:
-                    total += dfs(elem.getList(), depth + 1)
+                    total = dfs(elem.getList(), depth + 1)
             return total
         return dfs(nestedList, 1)
 

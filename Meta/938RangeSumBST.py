@@ -8,7 +8,7 @@ class TreeNode:
         self.right = right
 class Solution:
     def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
-        # Iterate through the BST checking whether the nodes are within the low/high interval
+        # Iterate through the BST, using DFS checking whether the nodes are within the low/high interval
         # If node is higher than high, only traverse left, if lower than low, traverse right
         # If within the bounds completely, check both children
         total = 0

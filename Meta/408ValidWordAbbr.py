@@ -7,18 +7,14 @@ class Solution:
 
         i, j = 0, 0
         while i < len(word) and j < len(abbr):
-            print(word[i])
-            print(abbr[j])
             if abbr[j].isdigit():
                 if abbr[j] == "0":
-                    print("0")
                     return False
 
                 num = 0
                 while j < len(abbr) and abbr[j].isdigit():
                     num = 10 * num + int(abbr[j])
                     j += 1
-                # print("j", j)
                 i += num
             
             else:

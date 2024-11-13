@@ -3,7 +3,7 @@ from typing import List
 class Solution:
 
     def __init__(self, w: List[int]):
-        # Create prefix sum array to create cummulative probability elements
+        # Create prefix sum array to create cumulative probability elements
         # Iterate through array and add each new number to running total so the space between represented the prob
         # Keep track of total to send to pickIndex
         prefix_sum = 0

@@ -14,7 +14,6 @@ class Solution:
         # Once they both match eventually loop is broken and returned
         a,b = p,q
         while a != b:
-
             a = a.parent if a else q
             b = b.parent if b else p
 

@@ -4,6 +4,10 @@ class Solution:
         # Sliding window approach
         # Keep expanding until zero count goes over k, then shrink until under k
         # Keep updating max size as we iterate through the array
+        # Shrink until the count is less than k by moving left further
+        # Expand by moving right further
+        # Len calculated by r - l + 1
+        
         left = 0
         max_len = 0
         zero_count = 0

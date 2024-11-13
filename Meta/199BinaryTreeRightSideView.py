@@ -19,7 +19,6 @@ class Solution:
             for i in range(level_len):
                 node = q.popleft()
                 if i == level_len - 1:
-                    # print("hi")
                     res.append(node.val)
                 
                 if node.left:

@@ -2,7 +2,7 @@ from typing import List
 class Solution:
     def findBuildings(self, heights: List[int]) -> List[int]:
         # Create and set a max iterating from the right
-        # Only append to res when you get a max
+        # Only append to res when you get a max (tallest building)
         tallest = heights[-1]
         res = []
         res.append(len(heights) - 1)

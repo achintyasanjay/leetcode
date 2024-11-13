@@ -1,12 +1,13 @@
 from typing import List
 class Solution:
     def intervalIntersection(self, firstList: List[List[int]], secondList: List[List[int]]) -> List[List[int]]:
-        # Iterate through both lists and check the starts and ends of each interval pair
-        # If end of 1 is before start of second then skip start of second
-        # If start of 1 is before start of second, skip to start of second
-        # Once recording check whichever end comes first and skip to that
-        # Repeat process
-
+        # Iterate through both lists and check the starts and ends of each interval pair 
+        # If start1 is before end2 and start2 is before end1, there is def overlap
+        # Find the starting point using max and the ending point using min
+        # Append that your result array
+        # If the end of the first array is less than the end of the second move the 
+        # iterator for the first array to check overlap for next list
+       
         i, j = 0, 0
         res = []
 

@@ -1,10 +1,11 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
+        # Make input into result list but iterate through length of input
         # Use a stack to keep track of parentheses
         # Iterate through appending all characters to a list 
-        # If closed parenthese appear when stack is empty, don't append to list
+        # If closed parentheses appear when stack is empty, set that index to empty
         # At the end if there are still open parentheses, change it to an empty string
-        # Concatenate what is left and remove all spaces
+        # Concatenate what is left and remove all empty spaces
 
         stk = []
         res = list(s)
@@ -22,5 +23,5 @@ class Solution:
 
         return "".join(res)
 
-# Time: O(n) n is number of characters in s
+# Time: O(n) where n is number of characters in s
 # Space: O(n) same as above
