@@ -41,6 +41,7 @@ class NestedInteger:
        :rtype List[NestedInteger]
        """
 from collections import deque
+from typing import List
 class Solution:
     def depthSum(self, nestedList: List[NestedInteger]) -> int:
         

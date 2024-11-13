@@ -6,7 +6,6 @@ class Solution:
             return -1
         directions = ((-1,-1),(1,-1),(-1,1),(1,1),(0,-1),(-1,0),(1,0),(0,1))
         q = deque()
-        seen = set()
         q.append((0,0,1))
         count = 1
 

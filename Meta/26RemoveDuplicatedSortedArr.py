@@ -1,4 +1,5 @@
 from collections import Counter
+from typing import List
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         # Start index counter at 1 for the first unique number

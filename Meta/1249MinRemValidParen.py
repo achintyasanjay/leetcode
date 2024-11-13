@@ -1,28 +1,26 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        # use a stack to keep track of current parenthese
-        # iterate over all other characters that aren't parentheses
-        # check at the beginning of there are no open parentheses on the stack then remove a close parenth
-        # for each open you can iterate over a close and pop from the stack
+        # Use a stack to keep track of parentheses
+        # Iterate through appending all characters to a list 
+        # If closed parenthese appear when stack is empty, don't append to list
+        # At the end if there are still open parentheses, change it to an empty string
+        # Concatenate what is left and remove all spaces
 
-        stack = []
-        res = []
-        invalid = set()
+        stk = []
+        res = list(s)
         for i in range(len(s)):
-            if s[i] == "(":
-                stack.append(i)
-            elif s[i] == ")":
-                if stack:
-                    stack.pop()
+            if s[i] == ')':
+                if not stk:
+                    res[i] = ''
                 else:
-                    invalid.add(i)
-
-        while stack:
-            invalid.add(stack.pop())
+                    stk.pop()
+            elif s[i] == '(':
+                stk.append(i)
         
-        for i in range(len(s)):
-            if i in invalid:
-                continue
-            res.append(s[i])
+        while stk:
+            res[stk.pop()] = ""
 
         return "".join(res)
+
+# Time: O(n) n is number of characters in s
+# Space: O(n) same as above
