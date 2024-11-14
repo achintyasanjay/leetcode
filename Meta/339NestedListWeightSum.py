@@ -44,29 +44,7 @@ from collections import deque
 from typing import List
 class Solution:
     def depthSum(self, nestedList: List[NestedInteger]) -> int:
-        
-        # Treat this as a graph function where each array is a directed edge away from base value
-        # Apply BFS to traverse graph
-        # Start off with traversing the array once to start off at depth 1
-        # Each time we move one level deeper keep track as second part of queue element
-        # Sum up total and return
 
-        q = deque
-        q = [[elem, 1] for elem in nestedList]
-        res = 0
-
-        while q:
-            element, value = q.pop()
-            if element.isInteger():
-                res += value * element.getInteger()
-            else:
-                for new in element.getList():
-                    q.append([new, value + 1])
-                
-        return res
-        # Time: O(N)
-        # Space: O(W) for width
-    
         # DFS Implementation
         # Create DFS function to recurse to max depth while summing integer values
         # Check if integer, if true sum it and if false dive another level
@@ -84,6 +62,30 @@ class Solution:
 
         # Time: O(N)
         # Space: O(D) for depth
+        
+        
+        # Treat this as a graph function where each array is a directed edge away from base value
+        # Apply BFS to traverse graph
+        # Start off with traversing the array once to start off at depth 1
+        # Each time we move one level deeper keep track as second part of queue element
+        # Sum up total and return
+        q = deque
+        q = [[elem, 1] for elem in nestedList]
+        res = 0
+
+        while q:
+            element, value = q.pop()
+            if element.isInteger():
+                res += value * element.getInteger()
+            else:
+                for new in element.getList():
+                    q.append([new, value + 1])
+                
+        return res
+        # Time: O(N)
+        # Space: O(W) for width
+    
+        
 
     
 

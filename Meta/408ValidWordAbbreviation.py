@@ -2,7 +2,8 @@ class Solution:
     def validWordAbbreviation(self, word: str, abbr: str) -> bool:
         # Iterate over both strings
         # Check if digit
-        # If digit, iterate through all digits converting them to integer and move index of word size forward
+        # If digit, iterate through all digits converting them to 
+        # integer and move index of word size forward
         # If not digit, make sure it matches as you iterate through
 
         i, j = 0, 0

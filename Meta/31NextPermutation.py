@@ -4,8 +4,8 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        # First we need to find the pivot where the list stops decreasing when traversing from right to left
-        # If there is no pivot and it's decreasing the entire way, just reverse the list in place and return
+        # First we need to find the pivot where the list starts decreasing when traversing from right to left
+        # If there is no pivot and it's increasing the entire way from right-left, just reverse the list in place and return
         # Once you find the pivot, we need to swap the pivot element with the next smallest integer
         # After the swap we want to make sure the reest of the list turns into ascending order from descending order
         # Reverse the suffix from the pivot element

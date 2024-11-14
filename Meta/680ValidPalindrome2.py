@@ -7,7 +7,7 @@ class Solution:
         removing one character, it returns True.
         """
         # Time complexity: O(n), where n is the length of the string, as we iterate through the string once.
-        # Space complexity: O(1), as we use a constant amount of space to store indices and characters.
+        # Space complexity: O(1)
         
         left = 0
         right = len(s) - 1

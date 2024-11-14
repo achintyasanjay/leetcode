@@ -15,26 +15,26 @@ class Solution:
         if not root:
             return []
         q = deque()
-        res = []
-        
-        q.append([0, root])
+        q.append((0, root))
         store = defaultdict(list)
-        minval = float('inf')
-        maxval = float('-inf')
+        min_val = float('inf')
+        max_val = float('-inf')
 
         while q:
-            val, node = q.popleft()
-            store[val].append(node.val)
-            minval = min(minval, val)
-            maxval = max(maxval, val)
-            if node.left:
-                q.append((val - 1, node.left))
-            if node.right:
-                q.append((val + 1, node.right))
+            col, node = q.popleft()
+            store[col].append(node.val)
             
+            min_val = min(min_val, col)
+            max_val = max(max_val, col)
+            if node.left:
+                q.append((col - 1, node.left))
+            if node.right:
+                q.append((col + 1, node.right))
 
-        for i in range(minval, maxval + 1):
+        res = []
+        for i in range(min_val, 1 + max_val):
             res.append(store[i])
+
         return res
     
 # Time: O(N) iterates through entire tree with n nodes
