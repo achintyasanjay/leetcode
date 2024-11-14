@@ -34,4 +34,7 @@ class Solution:
                 copies[curr].neighbors.append(copies[neighbor])
         
         return copies[node]
+    
+# Time: O(V + E) for nodes and each neighboring edge
+# Space: O(V + E) for each node and each of its neighbors
         

@@ -4,7 +4,8 @@ class Solution:
 
     def __init__(self, w: List[int]):
         # Create prefix sum array to create cumulative probability elements
-        # Iterate through array and add each new number to running total so the space between represented the prob
+        # Iterate through array and add each new number to running total so 
+        # the space between represented the prob
         # Keep track of total to send to pickIndex
         prefix_sum = 0
         self.prefix_arr = []
@@ -16,7 +17,10 @@ class Solution:
 
     def pickIndex(self) -> int:
         # Generate random number to variability
-        # Binary sort to find where the random number should be putting it to the left of the index it's supposed to be at making it fit in that range, which supports the probability being passed through
+        # Binary sort to find where the random number should 
+        # be putting it to the left of the index it's supposed 
+        # to be at making it fit in that range, which supports
+        # the probability being passed through
         rand_int = random.randint(1, self.totalSum)
         index = bisect.bisect_left(self.prefix_arr, rand_int)
         return index
