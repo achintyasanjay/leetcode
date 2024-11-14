@@ -8,6 +8,14 @@ from collections import deque
 from typing import Optional
 class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        # Create a copies dict to map old node to new nodes
+        # Start off with root node and add to the queue
+        # Start BFS and traverse neighbors for each old node
+        # For each neighbor that isn't in the copies list, 
+        # create a new node and map old node to new val and add to queue
+        # For all the neighbors for each old node in dict, 
+        # append the neighbor values (new) 
+        # Return the dict with the root
         if not node:
             return None
         
